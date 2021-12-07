@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>{{ feedback.first_name }} {{ feedback.last_name }}</p>
+    <p>{{ feedback.feedback }}</p>
+    <a href="{% url 'f:update' pk=feedback.pk %}" class="btn btn-md btn-warning">Update</a>
+    <a href="{% url 'f:delete' pk=feedback.pk %}" class="btn btn-md btn-danger">Delete</a>
+{% endblock %}

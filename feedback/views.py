@@ -1,3 +1,4 @@
+from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from feedback import models
 
@@ -24,7 +25,7 @@ class Add(CreateView):
 
 
 class Update(UpdateView):
-    fields = ('first_name', 'last_name')
+    fields = ('first_name', 'last_name', 'feedback')
     model = models.Feedback
     template_name = 'feedback/updateFeedback.html'
 
@@ -32,5 +33,5 @@ class Update(UpdateView):
 class Delete(DeleteView):
     context_object_name = 'feedback'
     model = models.Feedback
-    # success_url = reverse_lazy('first_app:home')
+    success_url = reverse_lazy('f:home')
     template_name = 'feedback/deleteFeedback.html'

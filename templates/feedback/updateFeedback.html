@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h3>Update Feedback Details</h3>
+    <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+    <input class="btn btn-md btn-primary" type="Submit" name="Submit" value="Update Feedback">
+    </form>
+    <a class="btn btn-md btn-danger" href="{% url  'f:delete' pk=feedback.pk %}">Delete</a>
+{% endblock %}
