@@ -12,4 +12,10 @@ class IndexView(ListView):
     template_name = 'questionBank/index.html'
 
 
+class Details(DetailView):
+    context_object_name = 'ques'
+    model = models.QuestionBank
+    template_name = 'questionBank/question.html'
+
+
 
