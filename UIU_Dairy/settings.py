@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'feedback.apps.FeedbackConfig',
+    'questionBank.apps.QuestionbankConfig',
 ]
 
 # System app
