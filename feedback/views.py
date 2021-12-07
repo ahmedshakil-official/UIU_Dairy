@@ -29,4 +29,8 @@ class Update(UpdateView):
     template_name = 'feedback/updateFeedback.html'
 
 
-
+class Delete(DeleteView):
+    context_object_name = 'feedback'
+    model = models.Feedback
+    # success_url = reverse_lazy('first_app:home')
+    template_name = 'feedback/deleteFeedback.html'
