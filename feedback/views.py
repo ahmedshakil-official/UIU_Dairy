@@ -17,3 +17,9 @@ class Details(DetailView):
     template_name = 'feedback/feedback.html'
 
 
+class Add(CreateView):
+    fields = ('first_name', 'last_name', 'feedback')
+    model = models.Feedback
+    template_name = 'feedback/addFeedback.html'
+
+
