@@ -18,4 +18,16 @@ class Details(DetailView):
     template_name = 'questionBank/question.html'
 
 
+class Add(CreateView):
+    fields = ('first_name', 'last_name', 'question')
+    model = models.QuestionBank
+    template_name = 'questionBank/addQ.html'
+
+
+class Update(UpdateView):
+    fields = ('first_name', 'last_name', 'question')
+    model = models.QuestionBank
+    template_name = 'questionBank/updateQ.html'
+
+
 
