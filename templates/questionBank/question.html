@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>{{ ques.first_name }} {{ ques.last_name }}</p>
+    <p>{{ ques.question }}</p>
+    <a href="{% url 'q:update' pk=ques.pk %}" class="btn btn-md btn-warning">Update</a>
+    <a href="{% url 'q:delete' pk=ques.pk %}" class="btn btn-md btn-danger">Delete</a>
+{% endblock %}

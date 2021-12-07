@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <ul>
+        {% for qu in ques %}
+            <li><a href="{% url 'q:detail' pk=qu.pk %}">{{ qu.question }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
