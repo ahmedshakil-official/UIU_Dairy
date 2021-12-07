@@ -30,4 +30,8 @@ class Update(UpdateView):
     template_name = 'questionBank/updateQ.html'
 
 
-
+class Delete(DeleteView):
+    # context_object_name = 'ques'
+    model = models.QuestionBank
+    success_url = reverse_lazy('q:home')
+    template_name = 'questionBank/deleteQ.html'
