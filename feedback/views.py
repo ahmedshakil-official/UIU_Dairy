@@ -11,4 +11,9 @@ class IndexView(ListView):
     template_name = 'feedback/index.html'
 
 
+class Details(DetailView):
+    context_object_name = 'feedback'
+    model = models.Feedback
+    template_name = 'feedback/feedback.html'
+
 
