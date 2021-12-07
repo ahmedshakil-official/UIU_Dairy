@@ -23,3 +23,10 @@ class Add(CreateView):
     template_name = 'feedback/addFeedback.html'
 
 
+class Update(UpdateView):
+    fields = ('first_name', 'last_name')
+    model = models.Feedback
+    template_name = 'feedback/updateFeedback.html'
+
+
+
